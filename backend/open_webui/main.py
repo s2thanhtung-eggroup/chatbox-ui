@@ -8,6 +8,10 @@ import shutil
 import sys
 import time
 import random
+import pysqlite3
+
+sys.modules["sqlite3"] = pysqlite3
+sys.modules["sqlite"] = pysqlite3
 
 from contextlib import asynccontextmanager
 from urllib.parse import urlencode, parse_qs, urlparse
